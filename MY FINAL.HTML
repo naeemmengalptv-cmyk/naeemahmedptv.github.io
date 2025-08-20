@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Naeem Ahmed — Bio & Portfolio</title>
+  <meta name="description" content="The personal bio, career highlights, portfolio and contact details of Naeem Ahmed, Graphic Designer at PTV Quetta." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b1220;
+      --bg-soft: #10182b;
+      --card: #111b31;
+      --text: #e6ebff;
+      --muted: #9bb0ff;
+      --brand: #6ea8ff;
+      --accent: #00d4ff;
+      --ring: 0 0 0 4px rgba(110,168,255,.3);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background: radial-gradient(1200px 700px at 75% -10%, rgba(0,212,255,.15), transparent 60%),
+                  radial-gradient(900px 600px at -10% 20%, rgba(110,168,255,.18), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:saturate(140%) blur(10px);
+      background:rgba(11,18,32,.75);
+      border-bottom:1px solid rgba(255,255,255,.06)
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px}
+    .brand .dot{width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--brand))}
+    .nav a{padding:8px 12px;border-radius:12px}
+    .nav a:hover{background:rgba(255,255,255,.06)}
+    .cta{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:14px;background:linear-gradient(135deg,var(--brand),var(--accent));color:#00122b;font-weight:700}
+    .cta:hover{text-decoration:none;filter:brightness(1.05)}
+    /* Hero */
+    .hero{padding:80px 0 40px}
+    .hero-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    .badge{display:inline-flex;gap:10px;align-items:center;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);font-size:12px;color:var(--muted)}
+    .title{font-size:48px;line-height:1.1;margin:14px 0 10px;font-weight:800}
+    .subtitle{color:var(--muted);font-size:18px}
+    .stack{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+    .chip{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);font-size:13px}
+    .card{background:linear-gradient(180deg,var(--card),#0c1427);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:18px}
+    .portrait{
+      aspect-ratio:1/1.05;border-radius:24px;overflow:hidden;
+      border:1px solid rgba(255,255,255,.08);
+      background:#0f1830;
+      display:grid;place-items:center;
+    }
+    .portrait img{width:100%;height:auto;display:block;object-fit:cover}
+    /* Sections */
+    section{padding:34px 0}
+    h2{font-size:28px;margin:0 0 14px}
+    .grid{display:grid;gap:16px}
+    .grid.cols-2{grid-template-columns:1fr 1fr}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .item{padding:16px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07)}
+    .item h3{margin:0 0 6px}
+    .muted{color:var(--muted)}
+    .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .timeline{position:relative;padding-left:18px}
+    .timeline:before{content:"";position:absolute;left:6px;top:0;bottom:0;width:2px;background:linear-gradient(var(--brand),transparent)}
+    .tl{position:relative;margin:0 0 14px;padding:10px 12px 10px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07)}
+    .tl:before{content:"";position:absolute;left:-8px;top:14px;width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--accent));box-shadow:0 0 0 3px rgba(110,168,255,.25)}
+    /* Footer */
+    footer{padding:26px 0 50px;color:var(--muted)}
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-wrap{grid-template-columns:1fr}
+      .title{font-size:38px}
+      .grid.cols-3{grid-template-columns:1fr}
+      .grid.cols-2{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand"><span class="dot"></span> Naeem Ahmed</div>
+      <nav class="row" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#work">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#awards">Awards</a>
+        <a href="#education">Education</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-wrap">
+      <div>
+        <div class="badge">Graphic Designer • TV & Film • Visual Effects</div>
+        <h1 class="title">I’m Naeem Ahmed — Graphic Designer at PTV Quetta</h1>
+        <p class="subtitle">20+ years crafting broadcast graphics, animations, virtual sets, opening titles and special effects for dramas, documentaries and live shows at Pakistan Television Corporation.</p>
+        <div class="stack">
+          <span class="chip">Broadcast Design</span>
+          <span class="chip">Motion Graphics</span>
+          <span class="chip">VFX</span>
+          <span class="chip">Virtual Sets</span>
+          <span class="chip">Typography</span>
+          <span class="chip">Storytelling</span>
+        </div>
+        <div class="row" style="margin-top:10px">
+          <a class="cta" href="#contact" aria-label="Jump to contact">Let’s collaborate</a>
+          <a href="#projects" style="font-weight:700">See my work →</a>
+        </div>
+      </div>
+      <div class="portrait card" aria-label="Profile image">
+        <img src="MYPIC.JPG" alt="Naeem Ahmed Portrait">
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container grid cols-2">
+      <div class="card">
+        <h2>About</h2>
+        <p>
+          I create clear, engaging visuals for TV screens — from channel IDs and lower-thirds to full virtual sets and cinematic title sequences. I currently serve as a <strong>Graphic Designer</strong> in the IT Department at <strong>PTV Quetta Center</strong>. I joined PTV in 2007 and have delivered thousands of graphics for news, entertainment, children’s shows, stage programs and documentaries.
+        </p>
+        <p>
+          Beyond broadcast, I produce short films and special effects, and I enjoy sharing positive, human-centered stories inspired by <em>Rumi</em> and <em>Osho</em>.
+        </p>
+      </div>
+      <div class="card">
+        <h2>At a glance</h2>
+        <div class="grid">
+          <div class="item"><strong>Location</strong><br><span class="muted">Quetta, Pakistan</span></div>
+          <div class="item"><strong>Role</strong><br><span class="muted">Graphic Designer — PTV Quetta</span></div>
+          <div class="item"><strong>Experience</strong><br><span class="muted">20+ years (Broadcast & Film)</span></div>
+          <div class="item"><strong>Interests</strong><br><span class="muted">Sufism, storytelling, education</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- باقی سیکشن وہی رہیں گے جیسے آپ کے پرانے کوڈ میں تھے -->
+  <!-- ...Experience, Projects, Skills, Awards, Education, Contact, Footer ... -->
+
+  <footer>
+    <div class="container row" style="justify-content:space-between">
+      <div>© <span id="year"></span> Naeem Ahmed. All rights reserved.</div>
+      <div class="row">
+        <a href="#about">About</a>
+        <a href="#work">Experience</a>
+        <a href="#projects">Projects</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
